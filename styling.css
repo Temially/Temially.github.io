@@ -28,7 +28,7 @@ body{
     .glitch {
     position: relative;
     color: olive;
-    font-size: 2.5em;
+    font-size: 1em;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     padding-top: 20px;
