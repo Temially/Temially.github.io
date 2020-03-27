@@ -28,8 +28,8 @@ body{
     .glitch {
     position: relative;
     color: olive;
-    font-size: 4em;
-    letter-spacing: .1em;
+    font-size: 2.5em;
+    letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     padding-top: 20px;
     }
@@ -253,7 +253,8 @@ body{
     }
     }
 
-@media(max-width: 1200px)
+
+    @media(max-width: 1200px)
 {
   .sidenav {
 height: 100%;
@@ -270,7 +271,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 29px;
+    font-size: 23px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -278,9 +279,11 @@ width: 108px;
         background-color: rgb(229, 247, 229);
     }
     #row{
-        margin-left: 1%;
+        margin-left: 5%;
     }
 }
+
+
 
 @media(max-width: 992px)
 {
@@ -299,7 +302,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 23px;
+    font-size: 40px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -307,9 +310,11 @@ width: 108px;
         background-color: rgb(229, 247, 229);
     }
     #row{
-        margin-left: 1%;
+        margin-left: 5%;
     }
 }
+
+
 
 @media(max-width: 768px)
 {
@@ -328,7 +333,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 23px;
+    font-size: 20px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -336,9 +341,10 @@ width: 108px;
         background-color: rgb(229, 247, 229);
     }
     #row{
-         margin-left: 1%;
+        margin-left: 5%;
     }
 }
+
 
 @media(max-width: 767px)
 {
@@ -357,7 +363,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 18px;
+    font-size: 23px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -365,9 +371,10 @@ width: 108px;
         background-color: rgb(229, 247, 229);
     }
     #row{
-        margin-right: 18%;
+        margin-left: 1%;
     }
 }
+
 
 
 
