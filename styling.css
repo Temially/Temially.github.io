@@ -299,7 +299,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 29px;
+    font-size: 23px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -328,7 +328,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 29px;
+    font-size: 23px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -357,7 +357,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 29px;
+    font-size: 23px;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
