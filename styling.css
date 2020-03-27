@@ -261,7 +261,7 @@ body{
 @media(max-width:992px)
 {
     #row{
-         margin-left: 5%;
+         margin-left: 3%;
     }
 }
 
@@ -282,7 +282,7 @@ width: 108px;
     .glitch {
     position: relative;
     color: olive;
-    font-size: 2em;
+    font-size: 1em;
     letter-spacing: .3em;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
@@ -290,7 +290,7 @@ width: 108px;
         background-color: rgb(229, 247, 229);
     }
     #row{
-         margin-left: 5%;
+         margin-left: 3%;
     }
 }
 
