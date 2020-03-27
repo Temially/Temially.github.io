@@ -294,6 +294,35 @@ width: 108px;
     }
 }
 
+@media(max-width: 767px)
+{
+  .sidenav {
+height: 100%;
+width: 108px;
+}
+
+.sidenav a{
+  font-size: 18px;
+}
+
+#wrapper {
+    text-align: center;
+    }
+    .glitch {
+    position: relative;
+    color: olive;
+    font-size: 20px;
+    letter-spacing: .3em;
+    animation: glitch-skew 0.5s infinite linear alternate-reverse;
+    }
+    #second{
+        background-color: rgb(229, 247, 229);
+    }
+    #row{
+        margin-left: 5%;
+    }
+}
+
 
 
 
