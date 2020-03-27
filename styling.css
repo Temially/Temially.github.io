@@ -338,7 +338,7 @@ width: 108px;
     animation: glitch-skew 0.5s infinite linear alternate-reverse;
     }
     #second{
-        background-color: rgb(229, 247, 229);
+        background-color: red;
     }
     #row{
         margin-left: 5%;
