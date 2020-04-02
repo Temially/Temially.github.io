@@ -16,6 +16,9 @@
      <link rel="shortcut icon" href="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
      <!--styling.css-->
     <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  
 </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -30,21 +33,46 @@
               <a class="nav-link link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link" href="#">About</a>
+              <a class="nav-link link cm-btn" 
+              onclick="document.getElementById('cm-popup').style.display='block' "href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link link" href="#">Recipes</a>
+                <a class="nav-link link" href="#fruita">Recipes</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link link" href="#">Note...</a>
+                <a class="nav-link link" href="#quote">Note...</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" id="myInput" oninput="myFunction()" placeholder="Search a fruit">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="search"><a class=" btn-outline-success" href="#fruita"  style="text-decoration: none;">Search</a> <a href="#fruits"></a></button>
           </form>
         </div>
       </nav>
+
+   <!-- Pop up window -->
+ <div id="cm-popup">
+  <!-- header of the pop up window -->
+
+<div style="padding:2%;overflow:hidden;">
+
+  <h5 style="margin-top: 80px; font-style: italic;" class="text-center">
+    <a href="" style="color: white;" class="typewrite" data-period="2000" data-type='[ "Fruity, as the name goes, is a smoothie website beautifully created and aimed at feeding your eyes with the very best combos!", "" ]'>
+      <span class="wrap"></span>
+    </a>
+  </h5>
+  
+       
+<!-- Hide button -->
+<button
+      class="cm-btn" id="cm-btn"
+   style="position:absolute;bottom:5%;left:2%;width:80px; height:40px;"
+   onclick="document.getElementById('cm-popup').style.display='none'">
+   Hide
+  </button>
+</div>
+</div>
+
       <div class="container" id="first">
         
       </div>
@@ -59,7 +87,12 @@
             </div>
           </div>
       </div>-->
+      <!-- Pop up window -->
+      
+ 
+      <div class="container" id="fruita">
 
+      </div>
      
         <div class="container" id="second">
 
@@ -72,188 +105,403 @@
               </div>
                <!--recipes section-->
     
-    <div class="row" id="row">
+    <div class="row" id="row" action="javascript:search();">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 10px;">
           <div class="card" style="width: 18rem; ">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body" id="fruits">
+              <h5 class="card-title">banana, pineapple & coconut smoothie</h5>
+              <p class="card-text">This combo of Iron, Fiber and Vitamin C makes for a refreshing tropical taste!</p>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+            <ul class="list-group list-group-flush" id="fruits">
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">2 cups of pineapples, cut into chunks</li>
+              <li class="list-group-item">2 bananas </li>
+              <li class="list-group-item">1 cup Coconut water</li>
+              <li class="list-group-item">1 cup ice(crushed)</li>
+               <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+              <p>**Recipe can be doubled as needed**</p>
             </div>
           </div>
         </div>
   
+
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 10px;">
-          <div class="card" style="width: 18rem; ">
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+            <div class="card-body" id="fruit">
+              <h5 class="card-title">cucumber, avocado & apple smoothie</h5>
+              <p class="card-text">This combo of Fiber, Vitamin K, and Vitamin E makes for a creamy, rich taste!</p>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+            <ul class="list-group list-group-flush" id="fruits">
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">1 cucumber(chopped)</li>
+              <li class="list-group-item">1/2 avocado </li>
+              <li class="list-group-item">1 green apple(diced)</li>
+              <li class="list-group-item">1 cup ice(crushed)</li>
+              <li class="list-group-item">1/4 cup of mint leaf</li>
+               <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+              <p>**Recipe can be doubled as needed**</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 10px;">
+          <div class="card" style="width: 18rem; ">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1512070950669-a53f137d67b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+            <div class="card-body" id="fruit">
+              <h5 class="card-title">pineapple, avocado & ginger smoothie</h5>
+              <p class="card-text">Vegan it up with this smoothie!</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">1 cup frozen pineapple(in chunks)</li>
+              <li class="list-group-item">1/2 avocado</li>
+              <li class="list-group-item">1/2 cup spinach</li>
+              <li class="list-group-item">1/4 tsp ground ginger(powder)-if fresh is unavailable</li>
+              <li class="list-group-item">2 tsp lemon juice</li>
+              <li class="list-group-item">1 cup of water</li>
+              <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
+            </ul>
+            <div class="card-body">
+              <h6><strong id="serve">Servings:</strong> 1 smoothie</h6>
+              <p>**Recipe can be doubled as needed**</p>
             </div>
           </div>
         </div>
         
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 10px;">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
           <div class="card" style="width: 18rem; ">
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1567427013572-f3d0764bf7ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+            <div class="card-body" id="fruit">
+              <h5 class="card-title">cucumber, orange & carrot smoothie </h5>
+              <p class="card-text">A healthy boost of vitamins and nutrients!</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">1 cucumber(chopped)</li>
+              <li class="list-group-item">2 carrots(chopped)</li>
+              <li class="list-group-item">1 large orange</li>
+              <li class="list-group-item">1 tsp lemon juice</li>
+              <li class="list-group-item">1 cup water</li>
+              <li class="list-group-item">1 cup of ice</li>
+              <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h6><strong id="serve">Servings:</strong> 3 smoothies</h6>
+              <p>**Recipe can be doubled as needed**</p>
             </div>
           </div>
         </div>
         
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1519096845289-95806ee03a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+            <div class="card-body" id="fruit">
+              <h5 class="card-title">banana, apple, mango and ginger smoothie</h5>
+              <p class="card-text">This smoothie provides you with a great boost of Vitamin C, Potassium and Fiber.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">1 banana</li>
+              <li class="list-group-item">1 apple</li>
+              <li class="list-group-item">1 mango</li>
+              <li class="list-group-item">ginger(1 tsp if fresh is unavailble)</li>
+              <p class="list-group-item">Add all ingredients in a blender with half cup of water and blend until smooth. Enjoy!</p>
+            </ul>
+            <div class="card-body">
+              <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+              <p>**Recipe can be doubled as needed**</p>
+            </div>
+          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1543528176-61b239494933?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80" alt="Card image cap">
+            <div class="card-body" id="fruits">
+              <h5 class="card-title">banana & strawberry smoothie</h5>
+              <p class="card-text">This beautiful creamy blend packed with vitamins is a must have!</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <h5 class="list-group-item" id="group">Ingredients:</h5>
+              <li class="list-group-item">2 bananas(peeled and chopped)</li>
+              <li class="list-group-item">10 strawberries</li>
+              <li class="list-group-item">1/2 cup of whole milk(could be substituted with coconut, yoghurt or water)</li>
+              <li class="list-group-item">1/2 cup of ice(optional)</li>
+              <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
+            </ul>
+            <div class="card-body">
+              <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+              <p>**Recipe can be doubled as needed**</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1568569350062-ebfa3cb195df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+              <div class="card-body" id="fruit">
+                <h5 class="card-title">pineapple, cucumber & lemon smoothie</h5>
+                <p class="card-text">A great dairy-free combo!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">2 cups Pineapple(frozen)</li>
+                <li class="list-group-item">1/2 cucumber</li>
+                <li class="list-group-item">2 lemons(medium sized)</li>
+                <li class="list-group-item">1 Ginger fresh</li>
+                <li class="list-group-item">1 bunch of parsley leaf</li>
+                <li class="list-group-item">3/4 cup Coconut water</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+                <p>**Recipe can be doubled as needed**</p>
               </div>
             </div>
           </div>
     
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1580910365148-baad301313ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+              <div class="card-body" id="fruit">
+                <h5 class="card-title">spinach, beetroot, carrot, apple & ginger smoothie</h5>
+                <p class="card-text">A healthy detox smoothie!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">1 medium beetroot</li>
+                <li class="list-group-item">1 green apple(chopped)</li>
+                <li class="list-group-item">2 tbsp lemon juice</li>
+                <li class="list-group-item">1 tsp freshly grated ginger</li>
+                <li class="list-group-item">handful of spinach(optional)</li>
+                <li class="list-group-item">8-10 carrots</li>
+                <li class="list-group-item">1 cup of water</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h6><strong id="serve">Servings:</strong> 1 smoothie</h6>
+                <p>**Recipe can be doubled as needed**</p>
               </div>
             </div>
           </div>
+         
           
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="https://images.unsplash.com/photo-1571115355324-1acb2dd043c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1577003811926-53b288a6e5d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+              <div class="card-body" id="fruit">
+                <h5 class="card-title">banana & watermelon smoothie</h5>
+                <p class="card-text">This recipe makes for a healthy and delicious drink to kick-start your day!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">1 banana (peeled and sliced)</li>
+                <li class="list-group-item">1 cup watermelon(in chunks)</li>
+                <li class="list-group-item">1/2 cup vanilla yoghurt</li>
+                <li class="list-group-item">1 cup ice</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h6><strong id="serve">Servings:</strong> 1 smoothie</h6>
+                <p>**Recipe can be doubled as needed**</p>
+              </div>
+            </div>
+          </div>
+
+        
+
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1417217601328-d3c66e6f1d48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="Card image cap">
+              <div class="card-body" id="fruit">
+                <h5 class="card-title">Mango & Avocado smoothie</h5>
+                <p class="card-text">Start off your day with this creamy, healthy smoothie!</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">1 cup of frozen mango(in chunks)</li>
+                <li class="list-group-item">1/2 avocado</li>
+                <li class="list-group-item">1/2 almond milk(could be substituted with coconut milk or water)</li>
+                <li class="list-group-item">1/2 cup Greek yoghurt</li>
+                <li class="list-group-item">1/2 cup of ice</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
+              </ul>
+              <div class="card-body">
+                <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+                <p>**Recipe can be doubled as needed**</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1490885578174-acda8905c2c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80" alt="Card image cap">
+              <div class="card-body" id="fruit">
+                <h5 class="card-title">pineapple, avocado & banana smoothie</h5>
+                <p class="card-text">A great source of Vitamin C!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">1 cup of pineapple(in chunks)</li>
+                <li class="list-group-item">1/2 avocado</li>
+                <li class="list-group-item">1/2 banana</li>
+                <li class="list-group-item">1/2 cup of plain yogurt</li>
+                <li class="list-group-item">1/2 cup of water</li>
+                <li class="list-group-item">ice(2 handfuls)</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+                <p>**Recipe can be doubled as needed**</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1575411619998-a654a55391da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80" alt="Card image cap">
+              <div class="card-body" id="fruitom">
+                <h5 class="card-title">orange & banana smoothie</h5>
+                <p class="card-text">Boost your immune system with this highly packed Vitamin C recipe!</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <h5 class="list-group-item" id="group">Ingredients:</h5>
+                <li class="list-group-item">1 cup of orange juice(chilled)</li>
+                <li class="list-group-item">1 large banana(peeled, sliced and frozen)</li>
+                <li class="list-group-item">1/2 cup plain yogurt</li>
+                <li class="list-group-item">4 ice cubes</li>
+                <li class="list-group-item">1 tbsp honey</li>
+                <p class="list-group-item">Add all ingredients in a blender and blend until smooth. Enjoy!</p>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h6><strong id="serve">Servings:</strong> 2 smoothies</h6>
+                <p>**Recipe can be doubled as needed**</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px;">
-            <div class="card" style="width: 18rem; ">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
+          
       </div>
           </div>
+
+          <div class="notepaper wow slideInUp">
+            <figure class="quote" id="quote">
+              <blockquote class="curly-quotes" cite="https://www.youtube.com/watch?v=qYLrc9hy0t0">
+                Sorry, there´s no magic bullet. You gotta eat healthy and live healthy to be healthy and look healthy. End of story.
+              </blockquote>
+              <figcaption class="quote-by"  id="notepaper">— Morgan Spurlock</figcaption>
+            </figure>
+          </div>
+
+          <div class="footer-2 container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-sm-6 col-md-6">
+                        <p class="text-left">© 2019 <normal style="color: rgb(33, 184, 33) !important; font-size: 26px !important;">F</normal><normal style="color: rgb(247, 133, 133);">ruity</normal></p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6">
+                        <p class="text-right">Made with with <i class="fa fa-heart" aria-hidden="true"></i> by Temi</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          <script>
+            function myFunction()
+          
+
+            {
+              var input, filter, ul, li, a, i, txtValue;
+              input = document.getElementById('fruits');
+            }
+          </script>
+
+
+<script>
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+            
 
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="js/smooth-scroll.js"></script>
       <script>
          var scroll = new SmoothScroll('a[href*="#"]');
        </script>
+
+       <!--wow animation-->
+      <script src="js/wow.min.js"></script>
+      <script>
+      new WOW().init();
+      </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
