@@ -20,7 +20,7 @@ body{
 
 /*footer*/
 .footer-2 {
-  background-color:#231f20;
+  background-color:#f0fff0;
   color:rgb(255,255,255);
 
   
@@ -34,9 +34,10 @@ body{
 }
 
 .fa-heart{
-  color: red;
+  color: pink;
 }
 /*end footer*/
+
 
 /*notepaper*/
 .notepaper {
