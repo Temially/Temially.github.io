@@ -30,8 +30,7 @@ body{
   position: relative;
   display: flex;
   flex-flow: column;
-  text-align: center;
-  align-items: center;
+ 
   width: 100%;
 }
 
