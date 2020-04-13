@@ -18,6 +18,21 @@ body{
     color: rgb(33, 184, 33);
 }
 
+.card{
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-img{
+  width: 100%;
+  object-fit: contain;
+}
+
+
 /*footer*/
 .footer-2 {
   background-color:#f0fff0;
