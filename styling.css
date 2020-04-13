@@ -19,7 +19,7 @@ body{
 }
 
 .card{
-  position: absolute;
+  position: relative;
   display: flex;
   flex-flow: column;
   text-align: center;
@@ -30,6 +30,9 @@ body{
 .card-img{
   width: 100%;
   object-fit: contain;
+  display: flex;
+    flex-flow: column;
+    
 }
 
 
