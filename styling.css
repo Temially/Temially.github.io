@@ -19,6 +19,14 @@ body{
 }
 
 .card{
+
+}
+
+.card-img{
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+    flex-flow: column;
   position: relative;
   display: flex;
   flex-flow: column;
@@ -27,13 +35,6 @@ body{
   width: 100%;
 }
 
-.card-img{
-  width: 100%;
-  object-fit: contain;
-  display: flex;
-    flex-flow: column;
-    
-}
 
 
 /*footer*/
